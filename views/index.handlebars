@@ -1,0 +1,39 @@
+<h1>Burger Barn!</h1>
+
+<h2>Burgers Available!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#unless uneaten}}
+      {{> burgers/burger-block uneaten=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers Eaten So Far!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if uneaten}}
+      {{> burgers/burger-block uneaten=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Type of Burger:</label>
+    <input type="text" id="ca" name="type">
+  </div>
+
+  <button type="submit">Add Burger!/button>
+</form>
+
+<li>
+	{{name}}
+
+	<button class="eat-burger" data-id="{{this.id}}">Devour!</button>
+</li>
+
