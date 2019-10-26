@@ -1,21 +1,21 @@
 <h1>Burger Barn!</h1>
 
-<h2>Burgers Available!</h2>
-
-<ul>
-  {{#each burger}}
-    {{#unless uneaten}}
-      {{> burgers/burger-block uneaten=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
 <h2>Burgers Eaten So Far!</h2>
 
 <ul>
   {{#each burger}}
-    {{#if uneaten}}
-      {{> burgers/burger-block uneaten=false}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers Available!</h2>
+
+<ul>
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
