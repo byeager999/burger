@@ -1,1 +1,15 @@
 # burger
+
+Eat the Burger app
+
+The Eat the Burger app allows a user to enter the burger of their choice.  Once the burger's name is entered and submited the burger's name will appear on the "Burger Menu" section.  Should the user click the "Devour" button next to the burger name that burger will then be moved to the "86 List" section.
+
+Behind the scenes when a burger is added it is added to the mysql burger_db and the devoured state is set to "false" or "0".  When the user clicks the "Devour" button the devoured state is changed to "true" or "1" in the database.  
+
+The technologies used in the making of this app were:  express, node.js, msql, html, css, bootstrap, handlebars, and is hosted on heroku.
+
+Below is the link to my github repository where this app resides: https://github.com/byeager999/burger
+
+The app is hosted on heroku at the following link: https://young-coast-88182.herokuapp.com/
+
+My role was that of the application developer for this application.
