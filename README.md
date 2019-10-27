@@ -10,6 +10,6 @@ The technologies used in the making of this app were:  express, node.js, msql, h
 
 Below is the link to my github repository where this app resides: https://github.com/byeager999/burger
 
-The app is hosted on heroku at the following link: https://young-coast-88182.herokuapp.com/
+The app is hosted on heroku at the following link: https://arcane-island-72364.herokuapp.com/
 
 My role was that of the application developer for this application.
