@@ -2,17 +2,17 @@
   <div class="jumbotron">
     <h1 class="display-4">Burger Barn!</h1>
     <p class="lead">Make the Burgers and Eat the Burgers!</p>
-    <form>
+    <form class="create-form">
       <div class="form-group">
         <label for="ca">Enter the Burger of Your Choice Below:</label>
 
         <div class="form-group">
-          <label for="ca">Type of Burger:</label>
-          <input type="text" id="ca" name="type">
+          <label for="newBurger">Type of Burger:</label>
+          <input type="text" id="newBurger" name="burger">
         </div>
 
     </form>
-    <button type="submit">Add Burger!</button>
+    <button type="submit" id="addBurger">Add Burger!</button>
     </form>
   </div>
 
@@ -23,18 +23,17 @@
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">Burger Menu</h5>
-        <li>
-          {{name}}
 
-          <button class="eat-burger" data-id="{{this.id}}">Devour!</button>
-        </li>
         <ul>
-          {{#each burger}}
-          {{#if devoured}}
-          {{> burgers/burger-block devoured=false}}
-          {{/if}}
-          {{/each}}
+            {{#each burgers}}
+            {{#unless devoured}}
+            {{this.name}}
+            <button class="eatBurger" id="eatBurger" data-id="{{this.id}}">Devour!</button>
+            <hr>
+            {{/unless}}
+            {{/each}}
         </ul>
+
       </div>
     </div>
   </div>
@@ -42,13 +41,18 @@
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">86 List</h5>
+
         <ul>
-          {{#each burger}}
-          {{#unless devoured}}
-          {{> burgers/burger-block devoured=true}}
-          {{/unless}}
-          {{/each}}
+          
+            {{#each burgers}}
+            {{#if devoured}}
+            {{this.name}}
+            <hr>
+            {{/if}}
+            {{/each}}
+          
         </ul>
+
       </div>
     </div>
   </div>
