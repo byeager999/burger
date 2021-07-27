@@ -26,7 +26,7 @@
             {{#each burgers}}
             {{#unless devoured}}
             {{this.name}}
-            <button class="eatBurger" id="eatBurger" data-id="{{this.id}}">Devour!</button>
+            <button class="eatBurger" id="eatBurger" data-id="{{this.id}}">86!</button>
             <hr>
             {{/unless}}
             {{/each}}
@@ -45,6 +45,9 @@
             {{#each burgers}}
             {{#if devoured}}
             {{this.name}}
+            <button class="restock" id="restock" data-id="{{this.id}}">Restock!</button>
+            <button class="delete-burger" id="delete-burger" data-id="{{this.id}}">Remove from Menu!</button>
+
             <hr>
             {{/if}}
             {{/each}}

@@ -1,5 +1,7 @@
+// adding in express
 var express = require("express");
 
+// setting port num
 var PORT = process.env.PORT || 8080;
 // here's some express stuff
 var app = express();
@@ -11,9 +13,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Set Handlebars.
+// require Handlebars
 var exphbs = require("express-handlebars");
 
+// adding handlebar middleware
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
