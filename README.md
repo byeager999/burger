@@ -8,8 +8,6 @@ Behind the scenes when a burger is added it is added to the mysql burger_db and 
 
 The technologies used in the making of this app were:  express, node.js, msql, html, css, bootstrap, handlebars, and is hosted on heroku.
 
-Below is the link to my github repository where this app resides: 
-
 The app is hosted on heroku at the following link: 
 
 My role was that of the application developer for this application.
